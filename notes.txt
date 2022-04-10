@@ -1,0 +1,3 @@
+s3 integration: https://www.youtube.com/watch?v=yGYeYJpRWPM
+
+## How to install docker on Ubuntu : https://docs.docker.com/engine/install/ubuntu/
