@@ -14,7 +14,6 @@ router.use('/', authentication);
 router.delete(
   '/',
   asyncHandler(async (req: any, res) => {
-    // @ts-ignore
     await KeystoreRepo.remove(req.keystore._id);
     new SuccessMsgResponse('Logout success').send(res);
   }),

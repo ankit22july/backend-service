@@ -1,0 +1,2 @@
+## How to create collection index:
+    db.getCollection("questions").createIndex( { "statement": 1 }, { unique: true } )

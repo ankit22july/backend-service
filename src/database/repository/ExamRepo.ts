@@ -12,7 +12,8 @@ export default class ExamRepo {
     const now = new Date();
     exam.createdAt = now;
     exam.updatedAt = now;
-    const createdExam = await ExamModel.create(exam); 
+    const createdExam = await ExamModel.create(exam);
+    console.log("Exam object: ", createdExam.toObject()); 
     // @ts-ignore
     return createdExam.toObject();
   }

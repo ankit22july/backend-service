@@ -6,9 +6,10 @@ export const COLLECTION_NAME = 'questions';
 
 export default interface Question extends Document {
   statement: string;
-  options: string[];
-  answer?: number;
+  options?: string[];
+  answer?: string;
   subject?: Subject;
+  isMCQ: boolean;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -18,9 +19,10 @@ const schema = new Schema(
     statement: {
       type: Schema.Types.String,
       required: true,
+      index: true,
     },
-    type: {
-      type: Schema.Types.String,
+    isMCQ: {
+      type: Schema.Types.Boolean,
       required: true,
     },
     options: {
@@ -28,15 +30,15 @@ const schema = new Schema(
       default: [],
     },
     answer: {
-      type: Schema.Types.Number,
+      type: Schema.Types.String,
       required: false,
     },
     subject: {
-      type: {
-        type: Schema.Types.ObjectId,
-        ref: 'Subject',
-      },
-      required: false,
+      type: Schema.Types.ObjectId,
+      ref: 'Subject',
+      required: true,
+      select: false,
+      index: true,
     },
     createdAt: {
       type: Date,

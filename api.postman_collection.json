@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "0d49182b-da56-466b-9fb1-96ed1f64880d",
+		"name": "backend service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "access",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ram\",\n    \"email\": \"ram@gmail.com\",\n    \"password\": \"ram@12345\",\n    \"profilePicUrl\": \"https://lh3.googleusercontent.com?ram=jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/signup/basic",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"signup",
+								"basic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ram@gmail.com\",\n    \"password\": \"ram@12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/login/basic",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"login",
+								"basic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTNhM2M2ZGNhYzZkMjgxNGNmNDJiIiwiaWF0IjoxNjUxNDAxNjIxLCJwcm0iOiJkNmM3ZmI2ODEwM2Y1Nzk5Y2FiNjczMjdmNDI0MDdmMmEyZTMzMDc4ZWNkZGY5YzNjMDBmODliNTFhZjBlYjc1Nzg2NmI1YmU0YjEwOWJmNmYyNmZhZWYzNWU4MTA0ZDQxMDRhZDMwMTgwNTZkM2IyOWNkZDE2OTVhMTFlYjI5YyJ9.iodD3--QE4-zVPzaXnzP7x-wFj5NDtoxPvzxRB5LDiuvneRhSDZ-g3PLpWOg3BsHhI7qq8Ge_YVzA-SjaYxnxA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token/refresh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTNhM2M2ZGNhYzZkMjgxNGNmNDJiIiwiaWF0IjoxNjUxMzk3OTI4LCJleHAiOjE2NTEzOTc5MjgsInBybSI6ImFlNzU5ZjI3MTYyN2ZjYWZlNmZhNmJkNjg5YWU4NmIzYjQyMjE1ZGIwM2Y1Mzc1NDhmNzlhODNlZjkxNjVlYWEyMzhhMWQ5NjYyMGViMDgzNzdiZmI1MjExMDVmZDNmODA4NzkyY2RmYjdjZDIyMmNmMGVkNmZhNDQ0OTVhZTY2In0.bvsHLuM5QJdzY9BKlFR7kC1iz-jprFuwtR_0vfWIKO34zY231Z21lbFRalPrYPwheMEe4uspV4HQoU12M4S3mw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTNhM2M2ZGNhYzZkMjgxNGNmNDJiIiwiaWF0IjoxNjUxMzk3OTI4LCJleHAiOjE2NTEzOTc5MjgsInBybSI6ImU5ZjRmYTIzNmM1YzNkZjIyMGU1ZGVhNjA0NDg2MTNkZWFiMjZmNGU1NTJlYWUxNTQ0ZThjZGMzZGY4YTBlZGZiNTdmZmIxMjNmNDQxMjJiZjM2OTE4NGVjMDZhMjdhYmRiNWMyMWRiNDlmOTFlOGNlZjk1ZDQ2ZGU1M2Y4ODhjIn0.gD4kNUoo7sI_I_1GUbv5-0hi9_we2fTLnuWMYGjbXIYvItOQKL99-HQ2UHx1Rr0IGMsVyZaPSmdv7QDD5sJtFw\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/v1/token/refresh",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "public/id/<user_id>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/user/public/id/626e6fb9458172a237381e75",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								"public",
+								"id",
+								"626e6fb9458172a237381e75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTZmYjk0NTgxNzJhMjM3MzgxZTc1IiwiaWF0IjoxNjUyMDE5NDMzLCJwcm0iOiI3YjY1YjQzNTk0NWVlYWVmZmJlY2Q0MTQ0YmIyZTIzNGNmOGNjNTYyZmY1ZTllM2ViOTVmNTRhYTJmOWVmMzhhOTc1Nzk3OTI1ZWQ5MTU2YzQxZjI0NmE3NjQ1NGU5NDkyNjY3MjI3ODdhMGE2ZWI4NzA3MjE5N2JkMWMxYWVlNCJ9.XPYSLq6ziLFVcq60GGRYnDp1mbskKyKB-0yk9VSFYA5OSdPXckzJaOAnqZbD-6Ns9G205bZWNmOl6kVR4DbYcQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/user/my",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit user profile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTZmYjk0NTgxNzJhMjM3MzgxZTc1IiwiaWF0IjoxNjUyMDE5NDMzLCJwcm0iOiI3YjY1YjQzNTk0NWVlYWVmZmJlY2Q0MTQ0YmIyZTIzNGNmOGNjNTYyZmY1ZTllM2ViOTVmNTRhYTJmOWVmMzhhOTc1Nzk3OTI1ZWQ5MTU2YzQxZjI0NmE3NjQ1NGU5NDkyNjY3MjI3ODdhMGE2ZWI4NzA3MjE5N2JkMWMxYWVlNCJ9.XPYSLq6ziLFVcq60GGRYnDp1mbskKyKB-0yk9VSFYA5OSdPXckzJaOAnqZbD-6Ns9G205bZWNmOl6kVR4DbYcQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ram Singh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "list users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/admin/user/list?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"admin",
+								"user",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/admin/user/626e3a246dcac6d2814cf425",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"admin",
+								"user",
+								"626e3a246dcac6d2814cf425"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roles\": \"AUTHOR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/admin/user/626e6fb9458172a237381e75",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"admin",
+								"user",
+								"626e6fb9458172a237381e75"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subject",
+			"item": [
+				{
+					"name": "addSubject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"General Awareness\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/subject/manage",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"subject",
+								"manage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all subjects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/subject/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"subject",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get questions for a subject",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\": \"1\",\n    \"limit\": \"10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/subject/6270dacc66755591299fcfe3/questions",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"subject",
+								"6270dacc66755591299fcfe3",
+								"questions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "question",
+			"item": [
+				{
+					"name": "add questions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subjectName\": \"General Knowledge\",\n    \"questions\": [\n        {\n            \"statement\": \"Tadoba national park known for sheltering tiger, panther and bear is located in:\",\n            \"options\": [\n                \"Assam\",\n                \"Chandrapur (Maharashtra)\",\n                \"Karnataka\",\n                \"Tamil Nadu\"\n            ],\n            \"answer\": \"2\",\n            \"isMCQ\": true\n        },\n        {\n            \"statement\": \"Apatanis are the tribes found in:\",\n            \"options\": [\n                \"Himanchal Pradesh\",\n                \"Nagaland\",\n                \"Sikkim\",\n                \"Arunachal Pradesh\"\n            ],\n            \"answer\": \"4\",\n            \"isMCQ\": true\n        },\n        {\n            \"statement\": \"Which one of the following river flows between Vindhyan and Satpura ranges?\",\n            \"options\": [\n                \"Narmada\",\n                \"Mahanadi\",\n                \"Son\",\n                \"Netravati\"\n            ],\n            \"answer\": \"1\",\n            \"isMCQ\": true\n        },\n        {\n            \"statement\": \"Which among the following headstreams meets the Ganges in last?\",\n            \"options\": [\n                \"Alaknanda\",\n                \"Pindar\",\n                \"Mandakini\",\n                \"Bhagirathi\"\n            ],\n            \"answer\": \"4\",\n            \"isMCQ\": true\n        },\n        {\n            \"statement\": \"Tsunamis are not caused by\",\n            \"options\": [\n                \"Hurricanes\",\n                \"Earthquakes\",\n                \"Undersea landslides\",\n                \"Volcanic eruptions\"\n            ],\n            \"answer\": \"1\",\n            \"isMCQ\": true\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/question",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"question"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "exam",
+			"item": [
+				{
+					"name": "create exam",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTZmYjk0NTgxNzJhMjM3MzgxZTc1IiwiaWF0IjoxNjUxOTk3OTAyLCJwcm0iOiI3ZjkxOTMwNWI5NjU3ZTdjYjA2MTUwYTljZTEzMzcyOTBmYmQ3MDg0MDE3YmIyMGRhODc2NDhmM2UxYTI2NmRkYzk2ZjkxM2I1NDI1OTc1NGVkN2JlM2NiZWQ3N2UwNGVjODRlYjc5MDhkZTQ5N2I4ZjhhNjRhNzMxZmRhMGU3NiJ9.P6dKBT8-0i-KXBZNby61wqWeC8EMR4eKf38GdDm64s-5QPbw_ttbntRLwmCnjRzcwWlI3BmqtrsMguJs9HR2RQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subjectName\": \"General Knowledge\",\n    \"title\": \"GK Test\",\n    \"description\": \"Sample test\",\n    \"tags\": [\"GK\", \"First\"],\n    \"maxScore\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/author/exam",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"author",
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list of exams for the Author",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc3Nlc3NtZW50cG9ydGFsLmNvbSIsImF1ZCI6ImFzc2Vzc21lbnRwb3J0YWwuY29tIiwic3ViIjoiNjI2ZTZmYjk0NTgxNzJhMjM3MzgxZTc1IiwiaWF0IjoxNjUxOTk3OTAyLCJwcm0iOiI3ZjkxOTMwNWI5NjU3ZTdjYjA2MTUwYTljZTEzMzcyOTBmYmQ3MDg0MDE3YmIyMGRhODc2NDhmM2UxYTI2NmRkYzk2ZjkxM2I1NDI1OTc1NGVkN2JlM2NiZWQ3N2UwNGVjODRlYjc5MDhkZTQ5N2I4ZjhhNjRhNzMxZmRhMGU3NiJ9.P6dKBT8-0i-KXBZNby61wqWeC8EMR4eKf38GdDm64s-5QPbw_ttbntRLwmCnjRzcwWlI3BmqtrsMguJs9HR2RQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/v1/author/exam",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"author",
+								"exam"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

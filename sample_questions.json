@@ -1,0 +1,60 @@
+[{
+    "subjectName": "General Knowledge",
+    "questions": [
+        {
+            "statement": "Tadoba national park known for sheltering tiger, panther and bear is located in:",
+            "options": [
+                "Assam",
+                "Chandrapur (Maharashtra)",
+                "Karnataka",
+                "Tamil Nadu"
+            ],
+            "answer": "2",
+            "isMCQ": true
+        },
+        {
+            "statement": "Apatanis are the tribes found in:",
+            "options": [
+                "Himanchal Pradesh",
+                "Nagaland",
+                "Sikkim",
+                "Arunachal Pradesh"
+            ],
+            "answer": "4",
+            "isMCQ": true
+        },
+        {
+            "statement": "Which one of the following river flows between Vindhyan and Satpura ranges?",
+            "options": [
+                "Narmada",
+                "Mahanadi",
+                "Son",
+                "Netravati"
+            ],
+            "answer": "1",
+            "isMCQ": true
+        },
+        {
+            "statement": "Which among the following headstreams meets the Ganges in last?",
+            "options": [
+                "Alaknanda",
+                "Pindar",
+                "Mandakini",
+                "Bhagirathi"
+            ],
+            "answer": "4",
+            "isMCQ": true
+        },
+        {
+            "statement": "Tsunamis are not caused by",
+            "options": [
+                "Hurricanes",
+                "Earthquakes",
+                "Undersea landslides",
+                "Volcanic eruptions"
+            ],
+            "answer": "1",
+            "isMCQ": true
+        }
+    ]
+}]

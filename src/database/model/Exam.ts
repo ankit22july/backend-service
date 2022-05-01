@@ -47,7 +47,6 @@ const schema = new Schema(
     },
     questions: {
       tyep: [{ type: Schema.Types.ObjectId, ref: 'Question' }],
-      required: true,
     },
     tags: [
       {
