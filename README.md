@@ -1,6 +1,6 @@
 # backend-service
 
-## Mock APIs and Data is available in  "src/routes/v1/mock" folder, to enable the mock APIs, set variable "enableMock" to true  in file "src/routes/v1/index.ts"
+## Mock APIs and Data are available in  "src/routes/v1/mock" folder, to enable the mock APIs, set variable "enableMock" to true  in file "src/routes/v1/index.ts"
 
 ## How to run dev server
 
